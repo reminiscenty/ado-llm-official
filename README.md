@@ -9,6 +9,22 @@ Official implementation of:
 > IEEE/ACM International Conference on Computer-Aided Design (ICCAD), 2024
 > [ACM Digital Library](https://dl.acm.org/doi/10.1145/3676536.3676816) · [arXiv](https://arxiv.org/abs/2406.18770)
 
+## Authors, affiliation, and contact
+
+The authors are affiliated with the **Department of Electrical and Computer
+Engineering, University of California, Santa Barbara (ECE/UCSB)**:
+
+- Yuxuan Yin
+- Yu Wang
+- Boxun Xu
+- Prof. Peng Li
+
+For questions about ADO-LLM or research collaboration, contact Prof. Peng Li at
+[lip@ucsb.edu](mailto:lip@ucsb.edu).
+
+Copyright © 2024 Yuxuan Yin, Yu Wang, Boxun Xu, and Peng Li. All authors are
+copyright holders of this implementation.
+
 ADO-LLM combines large-language-model proposals with Gaussian-process Bayesian
 optimization (BO) for analog circuit sizing. The LLM contributes circuit-design
 knowledge and quickly suggests promising regions; BO contributes systematic
