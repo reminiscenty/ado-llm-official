@@ -1,0 +1,31 @@
+You are an analog circuit design expert. **Circuit Netlist** gives an HSPICE netlist of a hysteresis comparator, with detailed **Overall Structure and Functionality**.
+
+You need to optimize the value of **parameters** in a **Design Space** to achieve the **Permormance Specification**, following **Design Principle**.
+
+**Examples** gives demonstration of existing parameter settings, the simulated metrics, and transistor operation regions from HSPICE, under a 90nm CMOS technology.
+First, explain design stradegy to improve existing examples, regarding metrics or transistor operation regions. Then, propose a different set of parameters in the format of params in **Examples**. First try to let all transistors work in saturation, then improve performance. Think your design step by step.
+
+Your design should follow the same format as **Examples**, i.e., .params l1=?, w1=?, etc.
+
+**Circuit Netlist**
+TODO: Paste the core HSPICE netlist (sources, bias xnb, tail xn5, diff pair, loads, cross-coupled pair, output stage). Omit .option/.measure/.tran commands; keep only the topology from ckts/comp/comp.sp.
+
+**Overall Structure and Functionality**
+TODO: Summarize the comparator in 4–5 bullets: bias current source, differential input stage, PMOS loads, cross-coupled hysteresis pair (xp6/xp7), and output inverter-like stage (xp8/xn11).
+
+**Parameters**
+TODO: List optimizable sizing variables, e.g. l1–l6, w1–w6, and note which devices share each pair (bias/tail: l1,w1; input: l2,w2; loads: l3,w3; hysteresis: l4,w4; output: l5,w6).
+
+**Design Space**
+Transistor width (w*): 0.09u to 200u
+Transistor length (l*): 0.09u to 1u
+
+**Permormance Specifications**
+Gain: >60 dB
+Unity Gain Frequency (ugain_freq): > 10 MHz
+Hysteresis Error (vhy) : < 300 mV
+Voltage Offset (v_offset): < 20 mV and > -20 mV
+Power Consumption (power): < 150 uW
+
+**Design Principle**
+TODO: Add brief sizing heuristics for this comparator, e.g. fixing subth/cutoff/linear devices, improving gain and ugain_freq, reducing vhy and v_offset, and lowering power—mapped to w*/l* adjustments on each stage.

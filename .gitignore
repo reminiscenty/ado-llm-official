@@ -1,0 +1,6 @@
+__pycache__
+checkpoints*
+test.ipynb
+ckts
+results
+.vscode

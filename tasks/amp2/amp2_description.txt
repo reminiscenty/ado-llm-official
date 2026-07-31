@@ -1,0 +1,33 @@
+You are an analog circuit design expert. **Circuit Netlist** gives an HSPICE netlist of a two-stage differential amplifier, with detailed **Overall Structure and Functionality**.
+
+You need to optimize the value of **parameters** in a **Design Space** to achieve the **Permormance Specification**, following **Design Principle**.
+
+**Examples** gives demonstration of existing parameter settings, the simulated metrics, and transistor operation regions from HSPICE, under a 90nm CMOS technology.
+First, explain design stradegy to improve existing examples, regarding metrics or transistor operation regions. Then, propose a different set of parameters in the format of params in **Examples**. First try to let all transistors work in saturation, then improve performance. Think your design step by step.
+
+Your design should follow the same format as **Examples**, i.e., .params l1=?, w1=?, etc.
+
+**Circuit Netlist**
+TODO: Paste the core HSPICE netlist (sources, bias, devices xn1–xnb, cc, rz). Omit .option/.measure/.ac commands; keep only the topology and parameterized device lines from ckts/amp2/amp2.sp.
+
+**Overall Structure and Functionality**
+TODO: Summarize the two-stage diff-amp in 3–4 bullets: input differential pair + tail/active load, second gain stage, bias network, and Miller compensation (c1, r1) for stability.
+
+**Parameters**
+TODO: List optimizable sizing variables and what each group controls, e.g. l1–l6, w1–w6 (transistors), c1 (compensation cap), r1 (zero-nulling resistor).
+
+**Design Space**
+Transistor width (w*): 0.12u to 50u
+Transistor length (l*): 0.08u to 1u
+Resistance (r*): 0.01k to 100k
+Capacitance (c*): 0.01p to 100p
+
+**Permormance Specifications**
+gain: > 60 dB
+Common-Mode Rejection Ratio (cmrr): > 75 dB
+Gain Bandwidth Product (gbw): > 1 MHz
+Phase Margin (pm): > 60 degree
+Power Consumption: < 30uW
+
+**Design Principle**
+TODO: Add brief sizing heuristics for this amp, e.g. push subth/linear devices to saturation (increase w*, decrease l*), tradeoffs for gain/CMRR/GBW/PM/power, and how c1/r1 affect bandwidth and phase margin.
